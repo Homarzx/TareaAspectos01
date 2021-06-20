@@ -9,13 +9,13 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class GUI extends JFrame {
+public class Ventana extends JFrame {
 	public JButton boton1,boton2,boton3;
 	public FlowLayout fl;
 	
 
 	
-	public GUI(){
+	public Ventana(){
 		super("Ventana");
 		setBounds(200,200,200,200);
 		setSize(500,500);
@@ -35,40 +35,40 @@ public class GUI extends JFrame {
 		add(boton2);
 		add(boton3);
 		
-		cambiarColor(this,boton1,boton2,boton3);
-		
-	}
-	
-	 public static void cambiarColor(JFrame p,JButton b1,JButton b2,JButton b3) {
-		 b1.addActionListener(new ActionListener() {
+		boton1.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				p.getContentPane().setBackground(Color.RED);
+				cambiarColor(Color.RED);
 				
 			}
 		});
-		 
-		 b2.addActionListener(new ActionListener() {
+		
+		boton2.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				cambiarColor(Color.BLUE);
 				
-				@Override
-				public void actionPerformed(ActionEvent e) {
-					p.getContentPane().setBackground(Color.CYAN);
-					
-				}
-			});
-		 b3.addActionListener(new ActionListener() {
+			}
+		});
+		
+		boton3.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				cambiarColor(Color.CYAN);
 				
-				@Override
-				public void actionPerformed(ActionEvent e) {
-					p.getContentPane().setBackground(Color.blue);
-					
-				}
-			});
-
-		 
-		 
-	 }
+			}
+		});
+		
+	}
+	public void cambiarColor(Color c) {
+		getContentPane().setBackground(c);
+		
+		
+	}
+	 
 	
 	
 	

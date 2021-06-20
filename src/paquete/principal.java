@@ -5,7 +5,7 @@ public class principal {
 
 
 	public static void main(String[] args) {
-		GUI ventana=new GUI();
+		Ventana ventana=new Ventana();
 		ventana.setVisible(true);
 	
 		
