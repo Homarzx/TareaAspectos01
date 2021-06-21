@@ -12,11 +12,13 @@ import javax.swing.JLabel;
 public class Ventana extends JFrame {
 	public JButton boton1,boton2,boton3;
 	public FlowLayout fl;
-	
+	public static EventManager manager;
 
 	
 	public Ventana(){
 		super("Ventana");
+		manager = new EventManager("cambioColor"); 
+		manager.subscribe("cambioColor",new ColorNotificactionListener());
 		setBounds(200,200,200,200);
 		setSize(500,500);
 		setVisible(true);
