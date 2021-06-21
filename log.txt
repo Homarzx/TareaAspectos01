@@ -1,0 +1,2 @@
+Realiza cambio color a :ROJO a la fecha de: Mon Jun 21 07:42:14 ECT 2021
+Realiza cambio color a :AZUL a la fecha de: Mon Jun 21 07:42:15 ECT 2021
